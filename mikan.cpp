@@ -4,6 +4,7 @@ class MikanBox
 {
 public:
   MikanBox();
+  ~MikanBox();
   void Add(int addmikan);
   void Del(int delmikan);
   void Empty();
@@ -21,9 +22,15 @@ MikanBox::MikanBox()
   total = 0;
 }
 
+MikanBox::~MikanBox()
+{
+  printf("みかん箱オブジェクトの任務完了 \n");
+}
+
 void MikanBox::Add(int addmikan)
 {
   total += addmikan;
+  if(total > 100) total = 100;
 }
 
 void MikanBox::Empty()
