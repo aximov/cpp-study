@@ -97,12 +97,10 @@ int main()
     RingoBox myRingoBox;
     for (int i = 0; i < init_num; ++i)
     {
-        bool ret = myRingoBox.Add(myRingo[i]);
-        if(ret) std:: cout << "1個追加" << std::endl;
+        if(myRingoBox.Add(myRingo[i])) std:: cout << "1個追加" << std::endl;
     }
 
-    bool ret = myRingoBox.Del(2);
-    if(ret) std::cout << "1個削除" << std::endl;
+    if(myRingoBox.Del(2)) std::cout << "1個削除" << std::endl;
 
     myRingoBox.PrintData();
     return 0;
