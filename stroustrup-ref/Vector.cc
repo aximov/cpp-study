@@ -13,3 +13,18 @@ double& Vector::operator[](int i) {
   return elem[i];
 }
 int Vector::size() { return sz; }
+
+void test() {
+  try {
+    Vector v(-27);
+  } catch (std::length_error) {
+    // case negative
+  } catch (std::bad_alloc) {
+    // case memory insufficient
+  }
+}
+
+int main() {
+  test();
+  return 0;
+}
